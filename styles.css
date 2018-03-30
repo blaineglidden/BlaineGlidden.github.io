@@ -23,6 +23,13 @@ h1{
     text-align:center;
     font-size:50px;
 }
+.vb {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
 ul.planets {
     list-style-type: none;
     margin: 0;
@@ -45,7 +52,7 @@ ul.planets li a {
 
 /* Change the link color to #111 (black) on hover */
 ul.planets li a:hover {
-    background-color: #111;
+    background-color: #2847a8;
 }
 
 /*#mercuryImage,#venusImage,#earthImage,#marsImage,#jupiterImage,#saturnImage,#uranusImage,#neptuneImage{

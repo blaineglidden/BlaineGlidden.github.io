@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        title
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<ul class="navBar">
+    <li><a href="a.html">Captain America</a></li>
+    <li><a href="thor.html">Thor</a></li>
+    <li><a href="l.html">Iron Man</a></li>
+<!-- used w3schools fot the slides-->
+</ul>
+
+<h1>CAPTAIN AMERICA</h1>
+<div class="slideshow">
+
+    <div class="slides">
+    <img src="https://i.annihil.us/u/prod/marvel/i/mg/9/80/537ba5b368b7d.jpg" style="width:100%" >
+    </div>
+
+    <div class="slides">
+    <img src="https://news.marvel.com/wp-content/uploads/2016/09/BPCap-Master.jpg" style="width:100%">
+
+    </div>
+    <div class="slides">
+    </div>
+
+    <a class="back" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(0)"></span>
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+</div>
+
+<!--- i used a slideshow tutorial from w3schools but changed it up -->
+<script>
+    var slideIndex = 0;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("slides");
+        var dots = document.getElementsByClassName("dot");
+        if (n >= slides.length) {slideIndex = 0}
+        if (n === -1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex].style.display = "block";
+        dots[slideIndex].className += " active";
+    }
+</script>
+<p>"Steve Rogers was a scrawny fine arts student growing up during the Great Depression. His alcoholic father died when Steve was a child, and his mother passed away from pneumonia after
+    he graduated high school. In early 1940, appalled at Nazi Germany’s horrific atrocities, Steve attempted to enlist in the army. Failing to pass physical requirements, he was invited to
+    volunteer for Operation: Rebirth, a project intended to enhance US soldiers to the height of physical perfection via the inventions and discoveries of Professor Abraham Erskine. Rogers
+    eagerly accepted and became the first test subject. After injections and ingestion of the "Super Soldier Serum," Rogers was exposed to a controlled burst of "Vita-Rays" that activated and
+    stabilized the chemicals in his system. The process successfully altered his physiology from its frail state to the maximum of human efficiency, including greatly enhanced musculature and
+    reflexes."
+<a href="http://marvel.com/universe/Captain_America_(Steve_Rogers)#axzz5IPj6LuJk">click here for more</a></p>
+<script>
+    <h3>Exciting Quiz Time!</h3>
+
+    <form id="quiz-form">
+
+        <fieldset>
+        <legend>where is this?</legend>
+    <label><input name="question1" value="yosemite" type="radio">Yosemite</label><br>
+        <label><input name="question1" value="grandcanyon" type="radio">The Grand Canyon</label><br>
+    <label><input name="question1" value="china" type="radio">China</label><br>
+        <img src="https://maps.googleapis.com/maps/api/streetview?size=300x300&location=36.093201,-112.116332&heading=270.39&pitch==5.99&fov=200&key=AIzaSyBuJk0ZN3yMa6mM8lOX9-Qhn-x1QEfa6tY" alt="the grand canyon">
+        </fieldset>
+
+        <fieldset>
+        <legend>where is this</legend>
+    <label><input name="question2" value="peru" type="radio">Peru</label><br>
+        <label><input name="question2" value="texas" type="radio">Texas</label><br>
+        <label><input name="question2" value="canada" type="radio">Canada</label><br>
+        <img src="https://maps.googleapis.com/maps/api/streetview?size=300x300&location=-13.15721,-72.523775&heading=244.42&pitch=14.47&fov=100&key=AIzaSyBuJk0ZN3yMa6mM8lOX9-Qhn-x1QEfa6tY" alt="machupichu peru">
+        </fieldset>
+
+        <fieldset>
+        <legend>what lake is this?</legend>
+    <label><input name="question3" value="mlake" type="radio">Moraine Lake in canada</label><br>
+    <label><input name="question3" value="tahoe" type="radio">A lake in Lake Tahoe</label><br>
+    <label><input name="The marina" value="marina" type="radio">The marina</label><br>
+    <img src="https://maps.googleapis.com/maps/api/streetview?size=300x300&location=51.321742,-116.186005&heading=225.8&pitch==-13.57&fov=100&key=AIzaSyBuJk0ZN3yMa6mM8lOX9-Qhn-x1QEfa6tY" alt="Moraine Lake canada">
+
+        </fieldset>
+
+        <fieldset>
+        <legend>what are some free places you can learn to code at?</legend>
+    <label><input name="question4" value="park" type="radio">Plitvice Lakes National Park</label><br>
+    <label><input name="question4" value="joshuatree" type="radio">Joshua Tree</label><br>
+    <label><input name="question4" value="redwood" type="radio">Red Wood</label><br>
+    <img src="https://maps.googleapis.com/maps/api/streetview?size=300x300&location=44.890539,15.611572&heading=40.87&pitch=-2.26&fov=50&key=AIzaSyBuJk0ZN3yMa6mM8lOX9-Qhn-x1QEfa6tY" alt="Plitvice Lakes National Park">
+        </fieldset>
+
+        <fieldset>
+        <legend>what continent is this in?</legend>
+    <label><input name="question5" value="africa" type="radio">Africa</label><br>
+        <label><input name="question5" value="bold" type="radio">Asia</label><br>
+        <label><input name="question5" value="neither" type="radio">Antartica</label><br>
+        <img src="https://maps.googleapis.com/maps/api/streetview?size=300x300&location=29.977237,31.131253&heading=43.79&pitch=4.08&fov=100&key=AIzaSyBuJk0ZN3yMa6mM8lOX9-Qhn-x1QEfa6tY" alt="the pyramids of giza">
+        </fieldset>
+
+        <button type="submit">Check me</button>
+    </form>
+
+    <div id="results"></div>
+
+        <ol>
+        <li>Add another question</li>
+    <li>Add a score variable and output their total score</li>
+    <li>Bonus: add LOTS more questions</li>
+    <li>Bonus: make a really cool animation if they get 100%</li>
+    <li>Bonus: make it look way better with CSS</li>
+    </ol>
+
+    <script>
+        var score =0
+    var quizForm = document.getElementById("quiz-form");
+    quizForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // resultsDiv is the div to display the results in
+        var resultsDiv = document.getElementById("results");
+
+        // answer1 stores whatever <input> element that they checked
+        //  or null if they didn't check any answer
+        //question 1
+        var answer1 = document.querySelector('[name="question1"]:checked');
+        if (!answer1) {
+            resultsDiv.innerHTML = "You didn't check anything! Sadface";
+        } else {
+            // answer1.value is the value attribute of the checked <input>
+            if (answer1.value === "grandcanyon") {
+                score+=1 ;
+            } else {
+                resultsDiv.innerHTML = "Try again!";
+            }
+        }
+        // question 2
+        var answer2 = document.querySelector('[name="question2"]:checked');
+        if (!answer2) {
+            resultsDiv.innerHTML = "You didn't check anything! Sadface";
+        } else {
+            // answer2.value is the value attribute of the checked <input>
+            if (answer2.value === "peru") {
+                score+=1 ;
+            } else {
+                resultsDiv.innerHTML = "Try again!";
+            }
+        }
+        // question 3
+        var answer3 = document.querySelector('[name="question3"]:checked');
+        if (!answer3) {
+            resultsDiv.innerHTML = "You didn't check anything! Sadface";
+        } else {
+            // answer3.value is the value attribute of the checked <input>
+            if (answer3.value === "mlake") {
+                score+=1 ;
+            } else {
+                resultsDiv.innerHTML = "Try again!";
+            }
+        }
+        //question 4
+        var answer4 = document.querySelector('[name="question4"]:checked');
+        if (!answer4) {
+            resultsDiv.innerHTML = "You didn't check anything! Sadface";
+        } else {
+            // answer4.value is the value attribute of the checked <input>
+            if (answer4.value === "park") {
+                score+=1 ;
+            } else {
+                resultsDiv.innerHTML = "Try again!";
+            }
+        }
+        //question 5
+        var answer5 = document.querySelector('[name="question5"]:checked');
+        if (!answer5) {
+            resultsDiv.innerHTML = "You didn't check anything! Sadface";
+        } else {
+            // answer5.value is the value attribute of the checked <input>
+            if (answer5.value === "africa") {
+                score+=1 ;
+            } else {
+                resultsDiv.innerHTML = "Try again!";
+            }
+        }
+
+        resultsDiv.innerHTML= "you got a score of " + score;
+
+
+
+    });
+
+</script>
+<h3>Trivia Quiz!</h3>
+
+<form id="quiz-form">
+
+    <fieldset>
+        <legend>What is captain americas real name?</legend>
+        <label><input name="question1" value="tony" type="radio">Tony Stark</label><br>
+        <label><input name="question1" value="steve" type="radio">Steve Rodgers</label><br>
+        <label><input name="question1" value="bruce" type="radio">Bruce Banner</label><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Who created Captain America</legend>
+        <label><input name="question2" value="stanandjack" type="radio">Stan Lee and Jack Kirby</label><br>
+        <label><input name="question2" value="joeandjack" type="radio">Joe Simon and Jack Kirby</label><br>
+        <label><input name="question2" value="stanandbob" type="radio">Stan Lee and Bob Kane</label><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Who was Captain Americas sidekick during World War II?</legend>
+        <label><input name="question3" value="bucky" type="radio">Bucky Barnes</label><br>
+        <label><input name="question3" value="falcon" type="radio">The Falcon</label><br>
+        <label><input name="question3" value="blackwidow" type="radio">Black Widow</label><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>What was the original shape of Captain Americas shield?</legend>
+        <label><input name="question4" value="circle" type="radio">Cirle</label><br>
+        <label><input name="question4" value="badge" type="radio">Badge</label><br>
+        <label><input name="question4" value="square" type="radio">Square</label><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>What was Captain America given to make him strong?</legend>
+        <label><input name="question5" value="titanium" type="radio">Titanium</label><br>
+        <label><input name="question5" value="vibranium" type="radio">Vibranium</label><br>
+        <label><input name="question5" value="chromium" type="radio">Chromium</label><br>
+
+    </fieldset>
+
+    <button type="submit">Check me</button>
+</form>
+
+<div id="results"></div>
+
+
+
+<script>
+    var score =0
+    var quizForm = document.getElementById("quiz-form");
+    quizForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+
+        var resultsDiv = document.getElementById("results");
+
+        //question 1
+        var answer1 = document.querySelector('[name="question1"]:checked');
+        if (!answer1) {
+            resultsDiv.innerHTML = "You didn't check anything! Sadface";
+        } else {
+
+            if (answer1.value === "steve") {
+                score+=1 ;
+            } else {
+                resultsDiv.innerHTML = "Try again!";
+            }
+        }
+        // question 2
+        var answer2 = document.querySelector('[name="question2"]:checked');
+        if (!answer2) {
+            resultsDiv.innerHTML = "You didn't check anything! Sadface";
+        } else {
+
+            if (answer2.value === "joeandjack") {
+                score+=1 ;
+            } else {
+                resultsDiv.innerHTML = "Try again!";
+            }
+        }
+        // question 3
+        var answer3 = document.querySelector('[name="question3"]:checked');
+        if (!answer3) {
+            resultsDiv.innerHTML = "You didn't check anything! Sadface";
+        } else {
+
+            if (answer3.value === "bucky") {
+                score+=1 ;
+            } else {
+                resultsDiv.innerHTML = "Try again!";
+            }
+        }
+        //question 4
+        var answer4 = document.querySelector('[name="question4"]:checked');
+        if (!answer4) {
+            resultsDiv.innerHTML = "You didn't check anything! Sadface";
+        } else {
+
+            if (answer4.value === "badge") {
+                score+=1 ;
+            } else {
+                resultsDiv.innerHTML = "Try again!";
+            }
+        }
+        //question 5
+        var answer5 = document.querySelector('[name="question5"]:checked');
+        if (!answer5) {
+            resultsDiv.innerHTML = "You didn't check anything! Sadface";
+        } else {
+
+            if (answer5.value === "vibranium") {
+                score+=1 ;
+            } else {
+                resultsDiv.innerHTML = "Try again!";
+            }
+        }
+
+        resultsDiv.innerHTML= "Your score is a  " + score;
+
+
+
+    });
+
+
+
+</script>
+<table>
+    <thead>
+    <tr>
+        <th> movie name </th>
+        <th> year</th>
+        <th> rotten tomato score</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td> captain America: first avenger </td>
+        <td> 2011 </td>
+        <td> 79% </td>
+    </tr>
+    <tr>
+        <td> captain America:winter soldier</td>
+        <td> 2014 </td>
+        <td> 71% </td>
+    </tr>
+    <tr>
+        <td> captain America:cibil war</td>
+        <td> 2016 </td>
+        <td> 91% </td>
+    </tr>
+
+</body>
+</html>
+
+

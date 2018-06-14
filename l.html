@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        title
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<ul class="navBar">
+    <li><a href="a.html">Captain America</a></li>
+    <li><a href="thor.html">Thor</a></li>
+    <li><a href="l.html">Iron Man</a></li>
+
+</ul>
+<h1>Iron Man</h1>
+<div class="slideshow">
+
+    <div class="slides">
+        <img src="https://i.annihil.us/u/prod/marvel/i/mg/c/60/55b6a28ef24fa.jpg" style="width:100%" >
+    </div>
+
+    <div class="slides">
+        <img src="https://news.marvel.com/wp-content/uploads/2018/04/IMTONY2018002_BrooksVar-cropped.jpg" style="width:100%">
+
+    </div>
+    <div class="slides">
+        <img src="https://news.marvel.com/wp-content/uploads/2018/03/INVIM2017600_DC31-m.jpg" style="width:100%">
+    </div>
+
+    <a class="back" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(0)"></span>
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+</div>
+
+
+<script>
+    var slideIndex = 0;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("slides");
+        var dots = document.getElementsByClassName("dot");
+        if (n >= slides.length) {slideIndex = 0}
+        if (n === -1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex].style.display = "block";
+        dots[slideIndex].className += " active";
+    }
+</script>
+<p>"Anthony "Tony" Stark was born to Howard Anthony Stark and Maria Collins Carbonell Stark, owners of the prominent US firm, Stark Industries. As a boy, Tony was fascinated with building
+    and controlling machines. At the age of 15 Tony entered the undergraduate electrical engineering program at the Massachusetts Institute of Technology (MIT), and graduated with two master’s
+    degrees by age 19. Tony went to work for Stark Industries, but showed more interest in living a reckless playboy lifestyle than using his engineering skills. At the age of 21,
+    Tony inherited Stark Enterprises when his parents were killed in a car accident secretly orchestrated by rival corporation Republic Oil"
+    <a href="http://marvel.com/universe/Iron_Man_(Anthony_Stark)#axzz5IPj6LuJk"> click here for more</a></p>
+
+        <h3>Trivia Quiz!</h3>
+
+        <form id="quiz-form">
+
+            <fieldset>
+            <legend>Who is Iron Man?</legend>
+        <label><input name="question1" value="ts" type="radio">Tony Stark</label><br>
+            <label><input name="question1" value="ca" type="radio">Captain America</label><br>
+        <label><input name="question1" value="e" type="radio">Everyone</label><br>
+             </fieldset>
+
+            <fieldset>
+            <legend>Whos is Iron Mans father</legend>
+        <label><input name="question2" value="hs" type="radio">Howard Stark</label><br>
+            <label><input name="question2" value="b" type="radio">Bob Stark</label><br>
+            <label><input name="question2" value="m" type="radio">Mark Stark</label><br>
+            </fieldset>
+
+            <fieldset>
+            <legend>Whas Iron Man born with powers?</legend>
+        <label><input name="question3" value="yes" type="radio">Yes</label><br>
+        <label><input name="question3" value="no" type="radio">No</label><br>
+
+
+            </fieldset>
+
+            </form>
+
+        <script>
+            var score =0
+        var quizForm = document.getElementById("quiz-form");
+        quizForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // resultsDiv is the div to display the results in
+            var resultsDiv = document.getElementById("results");
+
+            // answer1 stores whatever <input> element that they checked
+            //  or null if they didn't check any answer
+            //question 1
+            var answer1 = document.querySelector('[name="question1"]:checked');
+            if (!answer1) {
+                resultsDiv.innerHTML = "You didn't check anything! Sadface";
+            } else {
+                // answer1.value is the value attribute of the checked <input>
+                if (answer1.value === "ts") {
+                    score+=1 ;
+                } else {
+                    resultsDiv.innerHTML = "Try again!";
+                }
+            }
+            // question 2
+            var answer2 = document.querySelector('[name="question2"]:checked');
+            if (!answer2) {
+                resultsDiv.innerHTML = "You didn't check anything! Sadface";
+            } else {
+                // answer2.value is the value attribute of the checked <input>
+                if (answer2.value === "hs") {
+                    score+=1 ;
+                } else {
+                    resultsDiv.innerHTML = "Try again!";
+                }
+            }
+            // question 3
+            var answer3 = document.querySelector('[name="question3"]:checked');
+            if (!answer3) {
+                resultsDiv.innerHTML = "You didn't check anything! Sadface";
+            } else {
+                // answer3.value is the value attribute of the checked <input>
+                if (answer3.value === "no") {
+                    score += 1;
+                } else {
+                    resultsDiv.innerHTML = "Try again!";
+                }
+            }
+
+            resultsDiv.innerHTML= "you got a score of " + score;
+
+
+
+        });
+
+    </script>
+
+
+
+
+    </script>
+    <table>
+        <thead>
+        <tr>
+            <th> movie name </th>
+            <th> year</th>
+            <th> rotten tomato score</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td> Iron Man </td>
+            <td> 2008 </td>
+            <td> 94% </td>
+        </tr>
+        <tr>
+            <td> Iron Man 2</td>
+            <td> 2010 </td>
+            <td> 73% </td>
+        </tr>
+        <tr>
+            <td> Iron Man 3</td>
+            <td> 2013 </td>
+            <td> 80% </td>
+        </tr>
+
+</body>
+</html>
+
+
+
+
+
+</body>
+</html>
